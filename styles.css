@@ -340,7 +340,6 @@ body {
   padding: 5rem clamp(1.5rem, 6vw, 4rem);
   border-top: 1px solid rgba(196,162,85,0.15);
 }
-.pillar--dark { background: rgba(0,0,0,0.18); }
 .pillar__frame {
   max-width: 760px;
   margin: 0 auto;
@@ -364,9 +363,9 @@ body {
   margin: 0 0 1.4rem;
 }
 
-/* Ken Burns villa background (LE Luxury Real Estate) */
-.pillar--villa { background: var(--green-950); }
-.pillar--villa .pillar__frame { background: rgba(8,20,15,0.35); backdrop-filter: blur(1px); }
+/* Pillar background media: photo + subtle motion (Impulso, Yiux, LE) */
+.pillar--media { background: var(--green-950); }
+.pillar--media .pillar__frame { background: rgba(8,20,15,0.35); backdrop-filter: blur(1px); position: relative; z-index: 1; }
 .pillar__bg {
   position: absolute;
   inset: 0;
@@ -374,6 +373,8 @@ body {
   z-index: 0;
 }
 .pillar__bg-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -386,13 +387,39 @@ body {
   inset: 0;
   background: linear-gradient(180deg, rgba(6,18,13,0.68), rgba(6,18,13,0.82));
 }
-.pillar--villa .pillar__frame { position: relative; z-index: 1; }
 @keyframes kenburns {
   0% { transform: scale(1) translate(0, 0); }
   100% { transform: scale(1.25) translate(-2%, -2%); }
 }
+
+/* Yiux: drone pulling away — zoom out, looping without snapping back */
+.pillar__bg-img--zoomout {
+  animation: kenburns-out 16s ease-in-out infinite;
+}
+@keyframes kenburns-out {
+  0% { transform: scale(1.3) translate(-2%, -1%); }
+  100% { transform: scale(1) translate(0, 0); }
+}
+
+/* LE Luxury Real Estate: crossfade slideshow between two ambient photos */
+.pillar__bg--slideshow .pillar__bg-img {
+  opacity: 0;
+  animation: slideshow 22s ease-in-out infinite;
+}
+.pillar__bg--slideshow .pillar__bg-img:nth-of-type(1) { animation-delay: 0s; }
+.pillar__bg--slideshow .pillar__bg-img:nth-of-type(2) { animation-delay: 11s; }
+@keyframes slideshow {
+  0%   { opacity: 0; transform: scale(1); }
+  4%   { opacity: 1; }
+  45%  { opacity: 1; transform: scale(1.13); }
+  50%  { opacity: 0; transform: scale(1.15); }
+  100% { opacity: 0; }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .pillar__bg-img { animation: kenburns 48s ease-in-out infinite alternate; }
+  .pillar__bg-img { animation-duration: 48s; }
+  .pillar__bg-img--zoomout { animation-duration: 48s; }
+  .pillar__bg--slideshow .pillar__bg-img { animation-duration: 60s; }
 }
 
 .pillar__index {
