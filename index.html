@@ -40,7 +40,7 @@
 
   <header class="nav" id="nav">
     <a href="#top" class="nav__mark" aria-label="Lidia Escalona — inicio">
-      <img src="assets/monogram.png" alt="Lidia Escalona" class="mark mark--nav">
+      <img src="assets/logo-mark.png" alt="Lidia Escalona" class="mark mark--nav">
     </a>
     <nav class="nav__links">
       <a href="#sobre-mi">Sobre mí</a>
@@ -59,13 +59,19 @@
     <!-- HERO -->
     <section class="hero" id="top">
       <div class="hero__inner">
-        <img src="assets/monogram.png" alt="Lidia Escalona" class="mark mark--hero">
-        <p class="kicker">Empresaria y Estratega de Negocio</p>
-        <h1 class="hero__name">Lidia Escalona</h1>
-        <p class="hero__subtitle">Tecnología <span class="dot-sep">·</span> Ventas <span class="dot-sep">·</span> Luxury Real Estate</p>
-        <div class="rule"><span class="rule__dot"></span></div>
-        <p class="hero__anchor">&ldquo;Conecto personas con oportunidades de alto valor.&rdquo;</p>
-        <a href="#contacto" class="btn btn--gold">Agendar conversación</a>
+        <div class="hero__content">
+          <p class="kicker">Empresaria y Estratega de Negocio</p>
+          <h1 class="hero__logo">
+            <img src="assets/logo-lidia-full.png" alt="Lidia Escalona">
+          </h1>
+          <p class="hero__subtitle">Tecnología <span class="dot-sep">·</span> Ventas <span class="dot-sep">·</span> Luxury Real Estate</p>
+          <div class="rule rule--left"><span class="rule__dot"></span></div>
+          <p class="hero__anchor">&ldquo;Conecto personas con oportunidades de alto valor.&rdquo;</p>
+          <a href="#contacto" class="btn btn--gold">Agendar conversación</a>
+        </div>
+        <div class="hero__photo">
+          <img src="assets/lidia-hero.png" alt="Lidia Escalona">
+        </div>
       </div>
       <a href="#sobre-mi" class="scroll-cue" aria-label="Bajar a la siguiente sección">
         <span></span>
@@ -78,16 +84,21 @@
         <p class="kicker kicker--left">Sobre mí</p>
         <h2 class="section-title">Más de 15 años de trayectoria comercial.<br>Una mirada distinta, desde fuera.</h2>
         <div class="about__grid">
-          <p class="about__lead">
-            Más de 15 años de trayectoria en el sector comercial. Fundadora de tres
-            proyectos que conectan estrategia comercial, tecnología e inmobiliario
-            de lujo.
-          </p>
-          <p class="about__lead">
-            Mi aportación es el acompañamiento estratégico: muchos puntos de
-            fricción no se ven desde dentro de la propia empresa. Una mirada
-            externa con criterio comercial los detecta y ayuda a decidir mejor.
-          </p>
+          <div class="about__text">
+            <p class="about__lead">
+              Más de 15 años de trayectoria en el sector comercial. Fundadora de tres
+              proyectos que conectan estrategia comercial, tecnología e inmobiliario
+              de lujo.
+            </p>
+            <p class="about__lead">
+              Mi aportación es el acompañamiento estratégico: muchos puntos de
+              fricción no se ven desde dentro de la propia empresa. Una mirada
+              externa con criterio comercial los detecta y ayuda a decidir mejor.
+            </p>
+          </div>
+          <div class="about__photo">
+            <img src="assets/lidia-about.jpg" alt="Lidia Escalona">
+          </div>
         </div>
       </div>
     </section>
@@ -123,6 +134,7 @@
       <!-- PILAR 1 -->
       <article class="pillar" id="impulso">
         <div class="pillar__frame">
+          <img src="assets/logo-impulso.png" alt="Impulso Ventas Estratégicas" class="pillar__logo">
           <p class="pillar__index">01</p>
           <h3 class="pillar__title">Impulso Ventas Estratégicas</h3>
           <p class="pillar__tag">Consultoría comercial y externalización de departamentos de ventas</p>
@@ -154,6 +166,7 @@
       <!-- PILAR 2 -->
       <article class="pillar pillar--dark" id="yiux">
         <div class="pillar__frame">
+          <img src="assets/logo-yiux.png" alt="Yiux" class="pillar__logo">
           <p class="pillar__index">02</p>
           <h3 class="pillar__title">Yiux</h3>
           <p class="pillar__tag">Luxury Real Estate System</p>
@@ -178,7 +191,11 @@
       </article>
 
       <!-- PILAR 3 -->
-      <article class="pillar" id="le">
+      <article class="pillar pillar--villa" id="le">
+        <div class="pillar__bg" aria-hidden="true">
+          <img src="assets/villa-le.jpg" alt="" class="pillar__bg-img">
+          <div class="pillar__bg-overlay"></div>
+        </div>
         <div class="pillar__frame">
           <p class="pillar__index">03</p>
           <h3 class="pillar__title">LE Luxury Real Estate</h3>
@@ -201,7 +218,7 @@
     <!-- CONTACTO -->
     <section class="contact" id="contacto">
       <div class="contact__inner">
-        <img src="assets/monogram.png" alt="Lidia Escalona" class="mark mark--contact">
+        <img src="assets/logo-mark.png" alt="Lidia Escalona" class="mark mark--contact">
         <p class="kicker">Hablemos</p>
         <h2 class="contact__title">¿Oportunidad de alto valor<br>sobre la mesa?</h2>
         <div class="rule"><span class="rule__dot"></span></div>
@@ -218,7 +235,7 @@
   </main>
 
   <footer class="footer">
-    <img src="assets/monogram.png" alt="Lidia Escalona" class="mark mark--footer">
+    <img src="assets/logo-mark.png" alt="Lidia Escalona" class="mark mark--footer">
     <p>&copy; <span id="year"></span> Lidia Escalona</p>
   </footer>
 
