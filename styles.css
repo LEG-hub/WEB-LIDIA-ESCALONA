@@ -74,9 +74,9 @@ body {
   font-family: var(--serif);
   font-weight: 500;
   font-size: clamp(1.9rem, 4vw, 2.75rem);
-  line-height: 1.2;
+  line-height: 1.25;
   color: var(--offwhite);
-  margin: 0 0 2.5rem;
+  margin: 0 0 3rem;
 }
 
 .rule {
@@ -110,11 +110,11 @@ body {
 .btn {
   display: inline-block;
   font-family: var(--sans);
-  font-size: 0.82rem;
-  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  padding: 1rem 2.2rem;
-  border-radius: 2px;
+  padding: 1.05rem 2.6rem;
+  border-radius: 1px;
   transition: all 0.3s ease;
 }
 .btn--gold {
@@ -189,7 +189,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 6rem 1.5rem 4rem;
+  padding: 7rem 1.5rem 4.5rem;
   overflow: hidden;
 }
 .hero::before {
@@ -251,7 +251,7 @@ body {
 
 /* ===== About ===== */
 .about {
-  padding: 7rem clamp(1.5rem, 6vw, 4rem);
+  padding: 9.5rem clamp(1.5rem, 6vw, 4rem);
   border-top: 1px solid rgba(196,162,85,0.15);
 }
 .about__inner { max-width: var(--container); margin: 0 auto; }
@@ -259,12 +259,12 @@ body {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
-  gap: clamp(2rem, 5vw, 3.5rem);
+  gap: clamp(2.5rem, 6vw, 4.5rem);
 }
 .about__text {
   display: flex;
   flex-direction: column;
-  gap: 1.4rem;
+  gap: 1.8rem;
 }
 .about__lead {
   font-family: var(--serif);
@@ -296,7 +296,7 @@ body {
 
 /* ===== Value proposition ===== */
 .value {
-  padding: 4.5rem clamp(1.5rem, 6vw, 4rem) 5.5rem;
+  padding: 7rem clamp(1.5rem, 6vw, 4rem);
   border-top: 1px solid rgba(196,162,85,0.15);
   background: rgba(0,0,0,0.14);
 }
@@ -304,32 +304,30 @@ body {
 .value__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
+  gap: clamp(2.5rem, 5vw, 4rem);
 }
-.value__item {
-  border-left: 1px solid var(--gold-dim);
-  padding-left: 1.4rem;
-}
+.value__item { padding-top: 0.4rem; }
 .value__index {
   font-family: var(--serif);
-  color: var(--gold);
-  font-size: 1rem;
-  letter-spacing: 0.15em;
-  margin: 0 0 0.6rem;
+  font-weight: 400;
+  color: var(--gold-dim);
+  font-size: 2.1rem;
+  line-height: 1;
+  margin: 0 0 1.1rem;
 }
 .value__text {
   font-family: var(--serif);
   font-size: 1.15rem;
   color: var(--offwhite);
   margin: 0;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 /* ===== Pillars ===== */
 .pillars__intro {
   max-width: var(--container);
   margin: 0 auto;
-  padding: 2rem clamp(1.5rem, 6vw, 4rem) 0;
+  padding: 3.5rem clamp(1.5rem, 6vw, 4rem) 0.5rem;
   text-align: center;
 }
 .pillars__intro .kicker { text-align: center; }
@@ -337,13 +335,13 @@ body {
 
 .pillar {
   position: relative;
-  padding: 5rem clamp(1.5rem, 6vw, 4rem);
+  padding: 7.5rem clamp(1.5rem, 6vw, 4rem);
   border-top: 1px solid rgba(196,162,85,0.15);
 }
 .pillar__frame {
   max-width: 760px;
   margin: 0 auto;
-  padding: clamp(2rem, 4vw, 3.5rem);
+  padding: clamp(2.5rem, 5vw, 4.5rem);
   border: 1px solid var(--gold-dim);
   position: relative;
 }
@@ -449,10 +447,11 @@ body {
   max-width: 60ch;
 }
 .pillar__service {
-  margin-top: 1.8rem;
-  padding-top: 1.8rem;
-  border-top: 1px dashed rgba(196,162,85,0.25);
+  margin-top: 2.2rem;
+  padding-top: 2.2rem;
+  border-top: 1px solid rgba(196,162,85,0.2);
 }
+.pillar__cta { margin-top: 1.8rem; }
 .pillar__service-label {
   font-size: 0.72rem;
   letter-spacing: 0.22em;
@@ -514,7 +513,7 @@ body {
 
 /* ===== Leads (Inversores / Activos) ===== */
 .leads {
-  padding: 6rem clamp(1.5rem, 6vw, 4rem);
+  padding: 8rem clamp(1.5rem, 6vw, 4rem);
   border-top: 1px solid rgba(196,162,85,0.15);
 }
 .leads__intro {
@@ -527,16 +526,16 @@ body {
 
 .leads__grid {
   max-width: var(--container);
-  margin: 2.5rem auto 0;
+  margin: 3.5rem auto 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(1.5rem, 4vw, 2.5rem);
+  gap: clamp(2rem, 4vw, 3.5rem);
   align-items: start;
 }
 
 .leadcard__frame {
   height: 100%;
-  padding: clamp(1.8rem, 3vw, 2.6rem);
+  padding: clamp(2.2rem, 3.5vw, 3.2rem);
   border: 1px solid var(--gold-dim);
   position: relative;
 }
@@ -567,16 +566,17 @@ body {
 }
 .leadcard__text {
   font-size: 0.95rem;
+  line-height: 1.65;
   color: var(--offwhite-dim);
-  margin: 0 0 1.6rem;
+  margin: 0 0 2rem;
 }
 
 .leadform { display: flex; flex-direction: column; }
-.leadform__fields { display: flex; flex-direction: column; gap: 1.1rem; }
+.leadform__fields { display: flex; flex-direction: column; gap: 1.4rem; }
 .leadform__row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.1rem;
+  gap: 1.4rem;
 }
 .leadform__field {
   display: flex;
@@ -602,7 +602,14 @@ body {
   outline: none;
   transition: border-color 0.25s;
 }
-.leadform__field select { appearance: none; cursor: pointer; }
+.leadform__field select {
+  appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M0 0l5 6 5-6z' fill='%23c4a255'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.15rem center;
+  padding-right: 1.1rem;
+}
 .leadform__field select option { background: var(--green-950); color: var(--offwhite); }
 .leadform__field textarea { resize: vertical; min-height: 4.5em; font-family: var(--sans); }
 .leadform__field input:focus,
@@ -645,7 +652,7 @@ body {
 
 /* ===== Contact ===== */
 .contact {
-  padding: 7rem clamp(1.5rem, 6vw, 4rem);
+  padding: 9.5rem clamp(1.5rem, 6vw, 4rem);
   text-align: center;
   border-top: 1px solid rgba(196,162,85,0.15);
   background: radial-gradient(ellipse 60% 60% at 50% 20%, rgba(196,162,85,0.07), transparent 70%);
@@ -678,8 +685,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
-  padding: 3rem 1.5rem;
+  gap: 1rem;
+  padding: 4rem 1.5rem;
   border-top: 1px solid rgba(196,162,85,0.15);
   color: var(--offwhite-dim);
   font-size: 0.8rem;
@@ -689,8 +696,14 @@ body {
 @media (max-width: 860px) {
   .about__grid { grid-template-columns: 1fr; }
   .about__photo { order: -1; max-width: 300px; }
-  .value__grid { grid-template-columns: 1fr; gap: 1.8rem; }
+  .value__grid { grid-template-columns: 1fr; gap: 2.6rem; }
   .leads__grid { grid-template-columns: 1fr; }
+
+  .about,
+  .contact { padding-top: 6rem; padding-bottom: 6rem; }
+  .value { padding-top: 5rem; padding-bottom: 5rem; }
+  .pillar { padding-top: 5rem; padding-bottom: 5rem; }
+  .leads { padding-top: 5.5rem; padding-bottom: 5.5rem; }
 }
 
 @media (max-width: 560px) {
