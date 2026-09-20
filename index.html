@@ -47,6 +47,8 @@
       <a href="#impulso">Impulso</a>
       <a href="#yiux">Yiux</a>
       <a href="#le">LE Luxury</a>
+      <a href="#inversores">Inversores</a>
+      <a href="#activos">Activos</a>
       <a href="#contacto" class="nav__cta">Contacto</a>
     </nav>
     <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
@@ -216,6 +218,160 @@
           </p>
         </div>
       </article>
+    </section>
+
+    <!-- LEADS: INVERSORES Y ACTIVOS -->
+    <section class="leads">
+      <div class="leads__intro">
+        <p class="kicker kicker--left">Oportunidades</p>
+        <h2 class="section-title">¿Inviertes o representas un activo?</h2>
+      </div>
+
+      <div class="leads__grid">
+
+        <!-- INVERSOR -->
+        <article class="leadcard" id="inversores">
+          <div class="leadcard__frame">
+            <p class="leadcard__eyebrow">Para inversores</p>
+            <h3 class="leadcard__title">¿Eres inversor?</h3>
+            <div class="rule rule--left"><span class="rule__dot"></span></div>
+            <p class="leadcard__text">
+              Conecto inversores con activos de lujo off-market a través de
+              tecnología (Yiux) y acompañamiento personal. Trabajo solo con
+              capital a partir de 1.000.000&nbsp;€.
+            </p>
+
+            <form class="leadform" id="formInversor" action="https://formspree.io/f/REEMPLAZAR_INVERSOR" method="POST">
+              <div class="leadform__fields">
+                <div class="leadform__row">
+                  <label class="leadform__field">
+                    <span>Nombre</span>
+                    <input type="text" name="nombre" required>
+                  </label>
+                  <label class="leadform__field">
+                    <span>Email</span>
+                    <input type="email" name="email" required>
+                  </label>
+                </div>
+                <div class="leadform__row">
+                  <label class="leadform__field">
+                    <span>Teléfono</span>
+                    <input type="tel" name="telefono">
+                  </label>
+                  <label class="leadform__field">
+                    <span>Capital disponible aprox.</span>
+                    <select name="capital_disponible" required>
+                      <option value="" disabled selected>Selecciona un rango</option>
+                      <option value="1M-3M €">1M – 3M €</option>
+                      <option value="3M-10M €">3M – 10M €</option>
+                      <option value="+10M €">Más de 10M €</option>
+                    </select>
+                  </label>
+                </div>
+                <label class="leadform__field">
+                  <span>Zona de interés</span>
+                  <input type="text" name="zona_interes" placeholder="Ej. Costa del Sol, Baleares, Madrid...">
+                </label>
+                <label class="leadform__field">
+                  <span>Mensaje (opcional)</span>
+                  <textarea name="mensaje" rows="3"></textarea>
+                </label>
+
+                <label class="leadform__checkbox">
+                  <input type="checkbox" name="privacidad" required>
+                  <span>He leído y acepto la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</span>
+                </label>
+
+                <input type="hidden" name="_subject" value="lidiaescalona.com — Nuevo inversor">
+                <input type="text" name="_gotcha" class="leadform__hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                <button type="submit" class="btn btn--gold leadform__submit">Enviar</button>
+              </div>
+
+              <p class="leadform__success" role="status" hidden>Gracias, revisaré tu perfil y me pondré en contacto contigo en menos de 48h.</p>
+              <p class="leadform__error" role="alert" hidden>No se pudo enviar el formulario. Escríbeme directamente a <a href="mailto:lidia@lidiaescalona.com">lidia@lidiaescalona.com</a>.</p>
+            </form>
+          </div>
+        </article>
+
+        <!-- ACTIVO / AGENCIA -->
+        <article class="leadcard" id="activos">
+          <div class="leadcard__frame">
+            <p class="leadcard__eyebrow">Para propietarios y agencias</p>
+            <h3 class="leadcard__title">¿Tienes un activo o representas una agencia?</h3>
+            <div class="rule rule--left"><span class="rule__dot"></span></div>
+            <p class="leadcard__text">
+              Si tienes un activo de lujo o representas una agencia con
+              propiedades off-market, cuéntame los detalles y valoro cómo
+              conectarlo con el inversor adecuado.
+            </p>
+
+            <form class="leadform" id="formActivo" action="https://formspree.io/f/REEMPLAZAR_ACTIVO" method="POST">
+              <div class="leadform__fields">
+                <div class="leadform__row">
+                  <label class="leadform__field">
+                    <span>Nombre</span>
+                    <input type="text" name="nombre" required>
+                  </label>
+                  <label class="leadform__field">
+                    <span>Email</span>
+                    <input type="email" name="email" required>
+                  </label>
+                </div>
+                <div class="leadform__row">
+                  <label class="leadform__field">
+                    <span>Teléfono</span>
+                    <input type="tel" name="telefono">
+                  </label>
+                  <label class="leadform__field">
+                    <span>Tipo de activo</span>
+                    <select name="tipo_activo" required>
+                      <option value="" disabled selected>Selecciona una opción</option>
+                      <option value="Vivienda / villa">Vivienda / villa</option>
+                      <option value="Edificio">Edificio</option>
+                      <option value="Hotel">Hotel</option>
+                      <option value="Otro">Otro</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="leadform__row">
+                  <label class="leadform__field">
+                    <span>Ubicación</span>
+                    <input type="text" name="ubicacion" placeholder="Ciudad / región / país">
+                  </label>
+                  <label class="leadform__field">
+                    <span>Valor estimado</span>
+                    <select name="valor_estimado">
+                      <option value="" disabled selected>Selecciona un rango</option>
+                      <option value="1M-5M €">1M – 5M €</option>
+                      <option value="5M-20M €">5M – 20M €</option>
+                      <option value="+20M €">Más de 20M €</option>
+                    </select>
+                  </label>
+                </div>
+                <label class="leadform__field">
+                  <span>Mensaje (opcional)</span>
+                  <textarea name="mensaje" rows="3"></textarea>
+                </label>
+
+                <label class="leadform__checkbox">
+                  <input type="checkbox" name="privacidad" required>
+                  <span>He leído y acepto la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</span>
+                </label>
+
+                <input type="hidden" name="_subject" value="lidiaescalona.com — Nuevo activo/agencia">
+                <input type="text" name="_gotcha" class="leadform__hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                <button type="submit" class="btn btn--gold leadform__submit">Enviar</button>
+              </div>
+
+              <p class="leadform__success" role="status" hidden>Gracias, revisaré tu perfil y me pondré en contacto contigo en menos de 48h.</p>
+              <p class="leadform__error" role="alert" hidden>No se pudo enviar el formulario. Escríbeme directamente a <a href="mailto:lidia@lidiaescalona.com">lidia@lidiaescalona.com</a>.</p>
+            </form>
+          </div>
+        </article>
+
+      </div>
     </section>
 
     <!-- CONTACTO -->
