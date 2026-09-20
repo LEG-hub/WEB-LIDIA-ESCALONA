@@ -51,5 +51,4 @@ function initLeadForm(formId) {
   });
 }
 
-initLeadForm("formInversor");
-initLeadForm("formActivo");
+initLeadForm("formPrivado");

@@ -524,18 +524,13 @@ body {
 .leads__intro .kicker { text-align: center; }
 .leads__intro .section-title { text-align: center; }
 
-.leads__grid {
-  max-width: var(--container);
+.leads__single {
+  max-width: 640px;
   margin: 3.5rem auto 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 4vw, 3.5rem);
-  align-items: start;
 }
 
 .leadcard__frame {
-  height: 100%;
-  padding: clamp(2.2rem, 3.5vw, 3.2rem);
+  padding: clamp(2.4rem, 4vw, 3.6rem);
   border: 1px solid var(--gold-dim);
   position: relative;
 }
@@ -549,21 +544,6 @@ body {
 .leadcard__frame::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
 .leadcard__frame::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
 
-.leadcard__eyebrow {
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin: 0 0 0.6rem;
-}
-.leadcard__title {
-  font-family: var(--serif);
-  font-weight: 500;
-  font-size: clamp(1.4rem, 2.6vw, 1.8rem);
-  color: var(--offwhite);
-  margin: 0;
-  line-height: 1.25;
-}
 .leadcard__text {
   font-size: 0.95rem;
   line-height: 1.65;
@@ -697,7 +677,6 @@ body {
   .about__grid { grid-template-columns: 1fr; }
   .about__photo { order: -1; max-width: 300px; }
   .value__grid { grid-template-columns: 1fr; gap: 2.6rem; }
-  .leads__grid { grid-template-columns: 1fr; }
 
   .about,
   .contact { padding-top: 6rem; padding-bottom: 6rem; }
