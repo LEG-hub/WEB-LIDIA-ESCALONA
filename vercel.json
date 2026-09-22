@@ -7,5 +7,13 @@
       "has": [{ "type": "host", "value": "leluxury.lidiaescalona.com" }],
       "destination": "/le-luxury-real-estate.html"
     }
+  ],
+  "headers": [
+    {
+      "source": "/",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, must-revalidate" }
+      ]
+    }
   ]
 }
