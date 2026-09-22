@@ -1,29 +1,4 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    {
-      "source": "/",
-      "has": [{ "type": "header", "key": "host", "value": "leluxury.lidiaescalona.com" }],
-      "destination": "/le-luxury-real-estate.html"
-    },
-    {
-      "source": "/host-test-v1",
-      "has": [{ "type": "header", "key": "host", "value": "leluxury.lidiaescalona.com" }],
-      "destination": "/le-luxury-real-estate.html"
-    },
-    {
-      "source": "/header-test-v1",
-      "has": [{ "type": "header", "key": "x-test-flag", "value": "yes" }],
-      "destination": "/le-luxury-real-estate.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/",
-      "headers": [
-        { "key": "Cache-Control", "value": "no-store, must-revalidate" }
-      ]
-    }
-  ]
+  "trailingSlash": false
 }

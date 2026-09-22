@@ -13,25 +13,56 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="LE Luxury Real Estate — Private &amp; Off-Market Opportunities">
   <meta property="og:description" content="Intermediación discreta entre grandes inversores y activos de lujo off-market. Un número reducido de operaciones, siempre por presentación directa.">
-  <meta property="og:image" content="https://leluxury.lidiaescalona.com/assets/villa-le.jpg">
+  <meta property="og:image" content="https://lidiaescalona.com/assets/villa-le.jpg">
   <meta property="og:url" content="https://leluxury.lidiaescalona.com/">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="LE Luxury Real Estate">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="LE Luxury Real Estate — Private &amp; Off-Market Opportunities">
   <meta name="twitter:description" content="Intermediación discreta entre grandes inversores y activos de lujo off-market.">
-  <meta name="twitter:image" content="https://leluxury.lidiaescalona.com/assets/villa-le.jpg">
+  <meta name="twitter:image" content="https://lidiaescalona.com/assets/villa-le.jpg">
 
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://lidiaescalona.com/assets/favicon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://lidiaescalona.com/assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="https://lidiaescalona.com/assets/apple-touch-icon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="le-luxury-real-estate.css">
+  <link rel="stylesheet" href="https://lidiaescalona.com/styles.css">
+  <style>
+    /* ===== LE Luxury Real Estate — landing propia ===== */
+    .nav { justify-content: space-between; }
+    .lehero__nav-cta { padding: 0.6rem 1.3rem; font-size: 0.72rem; }
+
+    .lehero {
+      position: relative;
+      min-height: 92svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      padding: 8rem 1.5rem 5rem;
+    }
+    .lehero__bg { position: absolute; inset: 0; overflow: hidden; z-index: 0; }
+    .lehero__content { position: relative; z-index: 2; max-width: 720px; }
+    .lehero__title {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: clamp(2.6rem, 7vw, 4.5rem);
+      margin: 0.5rem 0 1.3rem;
+      color: var(--offwhite);
+      letter-spacing: 0.01em;
+    }
+
+    .lefooter__link { color: var(--gold-light); text-decoration: underline; text-underline-offset: 2px; }
+
+    @media (max-width: 560px) {
+      .lehero__nav-cta { padding: 0.5rem 1rem; font-size: 0.65rem; }
+    }
+  </style>
 </head>
 <body>
 
@@ -39,7 +70,7 @@
 
   <header class="nav">
     <a href="https://lidiaescalona.com" class="nav__mark" aria-label="Lidia Escalona — volver al inicio">
-      <img src="assets/logo-mark.png" alt="Lidia Escalona" class="mark mark--nav">
+      <img src="https://lidiaescalona.com/assets/logo-mark.png" alt="Lidia Escalona" class="mark mark--nav">
     </a>
     <a href="#privado" class="btn btn--gold-outline lehero__nav-cta">Solicitar conversación</a>
   </header>
@@ -49,7 +80,7 @@
     <!-- HERO -->
     <section class="lehero" id="top">
       <div class="lehero__bg" aria-hidden="true">
-        <img src="assets/villa-le.jpg" alt="" class="pillar__bg-img">
+        <img src="https://lidiaescalona.com/assets/villa-le.jpg" alt="" class="pillar__bg-img">
         <div class="pillar__bg-overlay"></div>
       </div>
       <div class="lehero__content">
@@ -86,7 +117,7 @@
             </p>
           </div>
           <div class="about__photo">
-            <img src="assets/lidia-about.jpg" alt="Lidia Escalona">
+            <img src="https://lidiaescalona.com/assets/lidia-about.jpg" alt="Lidia Escalona">
           </div>
         </div>
       </div>
@@ -166,10 +197,44 @@
   </main>
 
   <footer class="footer">
-    <img src="assets/logo-mark.png" alt="Lidia Escalona" class="mark mark--footer">
+    <img src="https://lidiaescalona.com/assets/logo-mark.png" alt="Lidia Escalona" class="mark mark--footer">
     <p>&copy; <span id="year"></span> Lidia Escalona — <a href="https://lidiaescalona.com" class="lefooter__link">lidiaescalona.com</a></p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const form = document.getElementById("formPrivado");
+    const fields = form.querySelector(".leadform__fields");
+    const successEl = form.querySelector(".leadform__success");
+    const errorEl = form.querySelector(".leadform__error");
+    const submitBtn = form.querySelector(".leadform__submit");
+    const submitLabel = submitBtn.textContent;
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      errorEl.hidden = true;
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Enviando...";
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        });
+
+        if (!response.ok) throw new Error("submit failed");
+
+        fields.hidden = true;
+        successEl.hidden = false;
+      } catch (err) {
+        errorEl.hidden = false;
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = submitLabel;
+      }
+    });
+  </script>
 </body>
 </html>
