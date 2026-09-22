@@ -452,6 +452,13 @@ body {
   border-top: 1px solid rgba(196,162,85,0.2);
 }
 .pillar__cta { margin-top: 1.8rem; }
+.pillar__cta-group {
+  margin-top: 1.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.pillar__cta-group .btn { margin-top: 0; }
 .pillar__service-label {
   font-size: 0.72rem;
   letter-spacing: 0.22em;
