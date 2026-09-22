@@ -4,7 +4,7 @@
   "rewrites": [
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "leluxury.lidiaescalona.com" }],
+      "has": [{ "type": "header", "key": "host", "value": "leluxury.lidiaescalona.com" }],
       "destination": "/le-luxury-real-estate.html"
     }
   ],
